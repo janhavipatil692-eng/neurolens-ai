@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 NeuroLens AI
 
-## Getting Started
+### Autonomous AI Technology Intelligence & Editorial Agent
 
-First, run the development server:
+NeuroLens is an autonomous AI agent that discovers current technology and AI news, evaluates its importance, checks its memory for previously processed topics, generates editorial content, and stores new knowledge in long-term memory using Breeth AI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 What is NeuroLens?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NeuroLens acts as an autonomous AI technology editor.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Instead of simply displaying news, NeuroLens follows an intelligent pipeline:
 
-## Learn More
+**Discover → Remember → Evaluate → Decide → Write → Remember**
 
-To learn more about Next.js, take a look at the following resources:
+The agent continuously processes technology topics and decides which stories are worth publishing for AI engineers, developers, researchers, and technology professionals.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Key Features
 
-## Deploy on Vercel
+- 📰 **AI & Technology News Discovery**
+  - Collects recent technology topics from RSS feeds.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 🧠 **Long-Term AI Memory**
+  - Uses Breeth AI to store and retrieve knowledge.
+  - Helps NeuroLens remember previously processed topics.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ⚖️ **AI Editorial Judge**
+  - Evaluates the importance and relevance of each topic.
+  - Assigns a score from 1–10.
+  - Decides whether a topic should be published.
+
+- ✍️ **Autonomous Content Generation**
+  - Generates a title, summary, technical analysis, and "Why It Matters" section.
+
+- 🔄 **Memory-Aware Processing**
+  - Searches existing memory before evaluating new topics.
+  - Saves published content back into Breeth.
+
+- 📊 **Dashboard**
+  - Provides a visual interface for monitoring the NeuroLens agent.
+
+- 🤖 **Autonomous Agent Workflow**
+  - The complete process runs automatically without requiring manual editorial decisions.
+
+---
+
+## 🏗️ Architecture
+
+```text
+             ┌──────────────────┐
+             │   RSS News Feeds │
+             └────────┬─────────┘
+                      ↓
+             ┌──────────────────┐
+             │ Topic Discovery  │
+             └────────┬─────────┘
+                      ↓
+             ┌──────────────────┐
+             │  Breeth Memory   │
+             │     Search       │
+             └────────┬─────────┘
+                      ↓
+             ┌──────────────────┐
+             │ Editorial Judge  │
+             │   AI Evaluation  │
+             └────────┬─────────┘
+                      ↓
+                Publish?
+                 /      \
+               No        Yes
+               ↓          ↓
+             Reject   Generate Post
+                           ↓
+                    ┌──────────────┐
+                    │ Save to      │
+                    │ Breeth       │
+                    └──────────────┘
