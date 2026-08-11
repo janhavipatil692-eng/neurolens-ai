@@ -35,17 +35,13 @@ export async function saveMemory(content: string) {
     return response.data;
   } catch (error: any) {
     console.error(
-      "BREETH WRITE ERROR:",
+      "⚠️ BREETH WRITE ERROR:",
       error.response?.data || error.message
     );
 
-    throw new Error(
-      `Breeth write failed: ${
-        error.response?.data
-          ? JSON.stringify(error.response.data)
-          : error.message
-      }`
-    );
+    // Breeth is optional.
+    // Do not crash the entire NeuroLens agent if memory saving fails.
+    return null;
   }
 }
 
@@ -66,7 +62,7 @@ export async function searchMemory(query: string, limit = 5) {
     return response.data;
   } catch (error: any) {
     console.error(
-      "BREETH SEARCH ERROR:",
+      "❌ BREETH SEARCH ERROR:",
       error.response?.data || error.message
     );
 
